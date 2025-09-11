@@ -11,7 +11,7 @@ const NearbyServices = () => {
 
   const fetchNearbyServices = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/requests/nearby', {
+      const response = await fetch('https://mechnearu.onrender.com/api/requests/nearby', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -32,7 +32,7 @@ const NearbyServices = () => {
 
   const handleAcceptService = async (serviceId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/requests/${serviceId}/accept`, {
+      const response = await fetch(`https://mechnearu.onrender.com/api/requests/${serviceId}/accept`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`

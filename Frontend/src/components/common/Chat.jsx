@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 
 const SOCKET_URL = 'http://localhost:5000';
-const API_URL = 'http://localhost:5000/api/chat';
+const API_URL = 'https://mechnearu.onrender.com/api/chat';
 
 const Chat = ({ requestId, onClose }) => {
   const [messages, setMessages] = useState([]);

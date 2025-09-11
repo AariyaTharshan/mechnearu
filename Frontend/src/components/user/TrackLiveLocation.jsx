@@ -77,7 +77,7 @@ const TrackLiveLocation = () => {
       geoWatch = navigator.geolocation.watchPosition(
         (pos) => {
           const { latitude, longitude } = pos.coords;
-          fetch(`http://localhost:5000/api/requests/${id}/location`, {
+          fetch(`https://mechnearu.onrender.com/api/requests/${id}/location`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ const TrackLiveLocation = () => {
 
   const fetchLocations = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/requests/${id}/locations`, {
+      const res = await fetch(`https://mechnearu.onrender.com/api/requests/${id}/locations`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }

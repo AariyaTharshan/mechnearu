@@ -15,7 +15,7 @@ const CurrentService = () => {
 
   const fetchCurrentService = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/requests/current', {
+      const response = await fetch('https://mechnearu.onrender.com/api/requests/current', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -36,7 +36,7 @@ const CurrentService = () => {
 
   const handleUpdateStatus = async (status) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/requests/${currentService._id}/status`, {
+      const response = await fetch(`https://mechnearu.onrender.com/api/requests/${currentService._id}/status`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
